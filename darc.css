@@ -1,0 +1,92 @@
+ html[data-theme='dark']{
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-headings: #3694FF;
+    --color-text: #B5B5B5;
+}
+html{
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+
+.container{
+    width: 700px;
+    height: 350px;
+    background-color: var(--bg-panel);
+    border-radius: 15px;
+    margin-top: 200px;
+    /* padding: 10% auto; */
+}
+
+.two-logo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.header{
+    font-size: 25px;
+    color: var(--color-headings);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.item{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 5px;
+    color: var(--color-text);
+ }
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 65px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 5px;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--color-headings);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 50px;
+}
